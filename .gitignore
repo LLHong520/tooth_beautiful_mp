@@ -1,0 +1,21 @@
+.DS_Store
+dist
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist
+.idea
+dist
+release_server/src
+.project
+.vscode
+.arcconfig
+project.config.json
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

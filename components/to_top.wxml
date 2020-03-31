@@ -1,0 +1,7 @@
+<template name="_to_top">
+    <view class="_to_top" wx:if="{{_to_top.isShow}}" bindtap="_to_top_fn">
+      <view class="_to_top_img">
+        <image src="../../assets/icon_top@3x.png" mode="scaleToFill"/>
+      </view>
+    </view>
+</template>

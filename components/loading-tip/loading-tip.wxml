@@ -1,0 +1,4 @@
+<view class="loading-tip">
+    <image  src="../../assets/loading.gif" mode="widthFix"></image>
+    <!-- <text>加载中...</text> -->
+</view>

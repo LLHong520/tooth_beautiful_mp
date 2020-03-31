@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "如齿美丽",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "confirmconsult": "../../components/confirm_com/confirm_com"
+  }
+}

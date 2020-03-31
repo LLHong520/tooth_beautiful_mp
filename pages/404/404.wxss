@@ -1,0 +1,35 @@
+.container{
+  display: flex;
+  justify-content: center;  
+}
+.post_404_wrapper{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 30rpx;
+  width: 60%;
+  margin:0 auto;
+}
+
+.post_404_wrapper image{
+  width: 300rpx;
+  padding: 100rpx 0;
+}
+.post_404_wrapper text{
+  text-align: left;
+  color: #999;
+  font-size: 24rpx;
+}
+.post_404_wrapper text.big{
+  text-align: center;
+  font-size: 36rpx;
+  padding-bottom: 25rpx;
+  color: #444;
+}
+.post_404_wrapper button{
+  background:rgba(88,155,229,1);
+  box-shadow:0px 7px 26px -2px rgba(115,182,255,1);
+  color:#fff;
+}

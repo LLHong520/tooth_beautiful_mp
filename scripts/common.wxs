@@ -1,0 +1,54 @@
+var PIC_URL = "https://pic.wenwo.com/fimg/";//图片路径修复
+var SUB_FIX = ".jpg";//图片后缀
+var m_default='../../assets/default/m_default@3x.png';
+var user_avater='../../assets/default/user-avater.png';
+function GET_IMG_URL(picID,type) {
+  var url=picID+'';
+  if(picID==''||picID==null||picID==undefined){
+    if(type=='m'){
+      url=m_default;
+    }else if(type=='u'){
+      url=user_avater;
+    }
+  }else{
+    picID+='';
+    if(picID.indexOf('http')>=0){
+      //网络图片
+    }else{
+      //图片服务器图片
+      url=PIC_URL+picID+SUB_FIX;
+    }
+  }
+  return url;
+}
+
+function dataFormat(val){
+  if(val==""||val==0) return "";
+  var timeMinSeconds=parseInt(val);
+  function fix(num){
+    return num>=10?num:"0"+num;
+  }
+  var date=getDate(timeMinSeconds);
+  console.log(date)
+  var year=date.getFullYear();
+  var month=fix(date.getMonth()+1);
+  var day=fix(date.getDate());
+  var hour=fix(date.getHours());
+  var minute=fix(date.getMinutes());
+  console.log(year+"-"+month+"-"+day+" "+hour+":"+minute);
+  //return year+"-"+month+"-"+day+" "+hour+":"+minute;
+  return year+"-"+month+"-"+day;
+}
+
+//function TxtFormat(Txt){
+//  if(Txt=="") return "";
+//  Txt = Txt.replace(/\[br\]/g, "");
+//  return Txt;
+//}
+//TxtFormat:TxtFormat
+
+
+module.exports={
+ GET_IMG_URL:GET_IMG_URL,
+ dataFormat:dataFormat
+};

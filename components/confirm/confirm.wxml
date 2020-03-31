@@ -1,0 +1,11 @@
+<view class="confirm-wrapper">
+  <view class="container">
+    <form bindsubmit="confirm">
+      <view class="title">{{title}}</view>
+      <view class="operate">
+        <view bindtap="cancel" class="operate-btn left">{{ cancelBtnText }}</view>
+        <button  formType="submit" class="operate-btn right">{{ confirmBtnText }}</button>
+      </view>
+    </form>
+  </view>
+</view>

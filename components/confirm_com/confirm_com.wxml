@@ -1,0 +1,23 @@
+<view class="confirm-wrapper">
+  <view class="container {{classFocus}}">
+    <view class="top_phone_img">
+      <image wx:if="{{showImgDefault}}" src="./images/doctor_icon_phone.png"></image>
+      <image wx:if="{{!showImgDefault}}" src="./images/Group.png"></image>
+    </view>
+    <form bindsubmit="confirm">
+      <view class="title">{{title}}</view>
+      <view class="input-wrapper">
+        <input placeholder="{{placeholder}}" 
+        bindfocus="focusCall"  
+        bindblur="blurCall"  
+        adjust-position="{{true}}" 
+        bindinput="inputCall"
+        name="numberVal" class="relinput"  type="text" />
+      </view>
+      <view class="operate">
+        <view bindtap="cancel" class="operate-btn left">{{ cancelBtnText }}</view>
+        <view bindtap="confirm" class="operate-btn right">{{ confirmBtnText }}</view>
+      </view>
+    </form>
+  </view>
+</view>

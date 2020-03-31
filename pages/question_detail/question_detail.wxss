@@ -1,0 +1,158 @@
+.question_detail {
+  padding-bottom: 150rpx;
+}
+.question_detail .detail {
+  padding: 30rpx 32rpx 50rpx;
+  border-bottom: #F3F4F5 32rpx solid;
+  background-color: #fff;
+}
+.question_detail .detail .question {
+  font-size: 40rpx;
+  color: #383838;
+  line-height: 56rpx;
+  font-weight: bold;
+}
+.question_detail .detail .user_info {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.question_detail .detail .user_info .photo {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+.question_detail .detail .user_info .user_msg {
+  margin-left: 13rpx;
+}
+.question_detail .detail .user_info .user_msg text {
+  line-height: 37rpx;
+}
+.question_detail .detail .user_info .user_msg .user_form {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+}
+.question_detail .detail .user_info .user_msg .user_form .user_name {
+  color: #2D2D2D;
+}
+.question_detail .detail .user_info .user_msg .user_date {
+  display: block;
+  font-size: 26rpx;
+  color: #999999;
+}
+.question_detail .people_say {
+  margin-top: 32rpx;
+  background-color: #fff;
+  padding: 42rpx 32rpx 0;
+}
+.question_detail .people_say .all_say {
+  display: block;
+  line-height: 48rpx;
+  font-size: 32rpx;
+  color: #424242;
+  font-weight: 600;
+}
+.question_detail .people_say .all_say_detail {
+  display: flex;
+  padding-bottom: 32rpx;
+  margin-top: 42rpx;
+  border-bottom: 1rpx solid #F3F3F3;
+}
+.question_detail .people_say .all_say_detail .item_photo {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+.question_detail .people_say .all_say_detail .item_detail {
+  margin-left: 18rpx;
+  width: 585rpx;
+}
+.question_detail .people_say .all_say_detail .item_detail .item_info text {
+  display: block;
+  line-height: 40rpx;
+}
+.question_detail .people_say .all_say_detail .item_detail .item_info .say_name {
+  font-size: 28rpx;
+  color: #2D2D2D;
+}
+.question_detail .people_say .all_say_detail .item_detail .item_info .say_date {
+  font-size: 26rpx;
+  color: #999999;
+}
+.question_detail .people_say .all_say_detail .item_detail .item_say {
+  font-size: 28rpx;
+  color: #424242;
+  margin-top: 21rpx;
+  margin-bottom: 25rpx;
+}
+.question_detail .people_say .all_say_detail .item_detail .i_say {
+  padding: 27rpx 0;
+  background-color: #F7F9FC;
+  border-radius: 6rpx;
+  position: relative;
+}
+.question_detail .people_say .all_say_detail .item_detail .i_say:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -14rpx;
+  left: 26rpx;
+  border-left: 15rpx solid transparent;
+  border-bottom: 15rpx solid #F7F9FC;
+  border-right: 15rpx solid transparent;
+}
+.question_detail .people_say .all_say_detail .item_detail .i_say text {
+  font-size: 26rpx;
+  color: #424242;
+}
+.question_detail .people_say .all_say_detail .item_detail .i_say text:first-child {
+  margin-left: 26rpx;
+  color: #589BE5;
+}
+.question_detail .btn_your_thought {
+  display: block;
+  width: 380rpx;
+  height: 90rpx;
+  background: #589BE5;
+  box-shadow: 0 7rpx 26rpx -2rpx #73B6FF;
+  border-radius: 45rpx;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 30rpx;
+  left: 50%;
+  margin-left: -190rpx;
+}
+.answers_view {
+  margin-top: 49rpx;
+  font-size: 33rpx;
+  color: #424242;
+  line-height: 48rpx;
+  overflow: hidden;
+}
+.answers_view image {
+  width: auto;
+  height: auto;
+  background: #f5f5f5;
+}
+.img-wrapper {
+  width: 100%;
+}
+.img-wrapper image {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 15rpx 15rpx 0 0;
+}
+.noTxt {
+  margin: 40rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #ccc;
+}

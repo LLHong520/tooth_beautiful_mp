@@ -1,0 +1,334 @@
+/**app.wxss**/
+@import "./components/showToast/showToast.wxss";
+/**
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: 'microsoft yahei';
+}
+**/
+.page_wrapper {
+  width: 100%;
+}
+
+/**text自动换行**/
+text {
+  word-break: break-all;
+}
+
+/**
+button[type="primary"] {
+color:#FFFFFF;
+background-color:#51b862;
+}
+**/
+.c_888{
+  color: #888;
+}
+.c_999{
+  color: #999 !important;
+}
+.c_blue{
+  color: #6082b9;
+}
+.c_aaa{
+  color: #aaa;
+}
+.c_555{
+  color: #555;
+}
+.c_f60{
+  color: #ff6600;
+}
+.c_main{
+  color: #51b862 !important;
+}
+.c_yellow{
+  color: #ffc31a !important;
+}
+.c_green{
+  color: #51b862 !important;
+}
+
+/**外边距**/
+.m5 {
+  margin: 5rpx;
+}
+.m10 {
+  margin: 10rpx;
+}
+.m15 {
+  margin: 15rpx;
+}
+.m20 {
+  margin: 20rpx;
+}
+.mt5 {
+  margin-top: 5rpx;
+}
+.mt10 {
+  margin-top: 10rpx;
+}
+.mt15 {
+  margin-top: 15rpx;
+}
+.mt20 {
+  margin-top: 20rpx;
+}
+.mt25 {
+  margin-top: 25rpx;
+}
+.mr5 {
+  margin-right: 5rpx;
+}
+.mr10 {
+  margin-right: 10rpx;
+}
+.mr15 {
+  margin-right: 15rpx;
+}
+.mr20 {
+  margin-right: 20rpx;
+}
+.mr25 {
+  margin-right: 25rpx;
+}
+.mb5 {
+  margin-bottom: 5rpx;
+}
+.mb10 {
+  margin-bottom: 10rpx;
+}
+.mb15 {
+  margin-bottom: 15rpx;
+}
+.mb20 {
+  margin-bottom: 20rpx;
+}
+.mb25 {
+  margin-bottom: 25rpx;
+}
+.ml5 {
+  margin-left: 5rpx;
+}
+.ml10 {
+  margin-left: 10rpx;
+}
+.ml15 {
+  margin-left: 15rpx;
+}
+.ml20 {
+  margin-left: 20rpx;
+}
+.ml25 {
+  margin-left: 25rpx;
+}
+
+/**padding**/
+.p5 {
+  padding: 5rpx;
+}
+.p10 {
+  padding: 10rpx;
+}
+.p15 {
+  padding: 15rpx;
+}
+.p20 {
+  padding: 20rpx;
+}
+.p30 {
+  padding: 30rpx;
+}
+.pt0 {
+  padding-top: 0;
+}
+.pt5 {
+  padding-top: 5rpx;
+}
+.pt10 {
+  padding-top: 10rpx;
+}
+.pt15 {
+  padding-top: 15rpx;
+}
+.pt20 {
+  padding-top: 20rpx;
+}
+.pt25 {
+  padding-top: 25rpx;
+}
+.pr5 {
+  padding-right: 5rpx;
+}
+.pr10 {
+  padding-right: 10rpx;
+}
+.pr15 {
+  padding-right: 15rpx;
+}
+.pr20 {
+  padding-right: 20rpx;
+}
+.pr25 {
+  padding-right: 25rpx;
+}
+.pb5 {
+  padding-bottom: 5rpx;
+}
+.pb10 {
+  padding-bottom: 10rpx;
+}
+.pb15 {
+  padding-bottom: 15rpx;
+}
+.pb20 {
+  padding-bottom: 20rpx;
+}
+.pb25 {
+  padding-bottom: 25rpx;
+}
+.pl5 {
+  padding-left: 5rpx;
+}
+.pl10 {
+  padding-left: 10rpx;
+}
+.pl15 {
+  padding-left: 15rpx;
+}
+.pl20 {
+  padding-left: 20rpx;
+}
+.pl25 {
+  padding-left: 25rpx;
+}
+
+.f_24{
+  font-size: 24rpx;
+}
+
+/**没有结果*/
+.no_result{
+  display: flex;
+  flex-direction: column;
+  padding: 50rpx;
+  font-size: 28rpx;
+  color: #999;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+
+}
+.no_result image{
+  width: 161rpx;
+  margin: 100rpx auto;
+}
+.no_result text{
+  text-align: center;
+}
+
+/**滚动到底加载中**/
+.loading-tip{
+  font-size: 28rpx;
+  color: #999;
+  padding:30rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-tip image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 15rpx;
+}
+
+/*通栏tab切换**/
+.tab{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1rpx solid #f6f6f6;
+}
+.tab_cell{
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 74rpx;
+  height: 80rpx;
+}
+.tab_text{
+  padding: 17rpx 0rpx;
+  color: #999;
+}
+.tab_cell.focus .tab_text{
+  color: #51b862;
+  border-bottom: 6rpx solid #51b862;
+}
+.tab_cell .tab_text{
+  border-bottom: 6rpx solid #fff;
+}
+
+/**返回顶部**/
+._to_top{
+  position: fixed;
+  right: 15rpx;
+  bottom: 80rpx;
+  z-index: 999;
+}
+._to_top_img{
+  width: 108rpx;
+  height: 108rpx;
+}
+._to_top_img image{
+  width: 108rpx;
+  height: 108rpx;
+}
+/**返回首页**/
+.toIndexPage{
+  position: fixed;
+  left: 15rpx;
+  bottom: 200rpx;
+  z-index: 999;
+}
+.toIndexPage_img{
+  width: 108rpx;
+  height: 108rpx;
+  background-color: rgba(88,155,229,1);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toIndexPage_img image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/**icons**/
+.icon-favour,.icon-complain,.icon-pay,.icon-del,.icon-reply{
+  width:36rpx;
+  height: 36rpx;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.block_banner{
+  width: 100%;
+  box-sizing: border-box;
+}

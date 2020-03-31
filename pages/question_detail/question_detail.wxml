@@ -1,0 +1,65 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<import src="../../components/showToast/showToast.wxml" />
+<template is="showToast" data="{{showToast: showToast}}" />
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+  <confirm
+   wx:if="{{showConfirm}}"
+   title="您还未登录，是否微信授权去登陆？"
+   bind:confirm="confirmLogin"
+   bind:cancel="cancel"
+  ></confirm>
+  <view class="question_detail">
+    <view class="detail">
+      <text class="question">{{detail.title}}</text>
+      <view class="user_info">
+        <image class="photo" src="{{common.GET_IMG_URL(detail.headimgurl)}}"></image>
+        <view class="user_msg">
+          <text class="user_form">来自：<text class="user_name">{{detail.nickName}}</text></text>
+          <text class="user_date">{{common.dataFormat(detail.createTime)}} 发布</text>
+        </view>
+      </view>
+      <view class="answers_view">
+        <!-- 文章详情富文本内容 -->
+        <template is="wxParse" data="{{wxParseData:detail_content.nodes}}"/>
+        <!-- /文章详情富文本内容 -->
+        <!-- /图片 -->
+        <view class="img-wrapper">
+          <block wx:for="{{detail.img}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <image bindtap="previewImg" data-index="{{index}}" src="{{common.GET_IMG_URL(item)}}" mode="scaleToFill"></image>
+          </block>
+        </view>
+        <!-- /图片 -->
+      </view>
+    </view>
+    <view class="people_say">
+      <view>     
+        <text class="all_say">大家在说</text>   
+      </view>
+      <block wx:if="{{detail.answers.length>0}}" wx:for="{{detail.answers}}" wx:for-item="item"  wx:for-index="index" wx:key="index">
+        <view class="all_say_detail">
+          <image class="item_photo" src="{{common.GET_IMG_URL(item.headimgurl)}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+          <view class="item_detail">
+            <view bindtap="toComment" data-type="1" data-id="{{item.uinionId}}" data-answer="{{item.answer}}" data-url="../../pages/comment/comment?questionId={{detail.id}}&answersId={{item.id}}&nickName={{item.nickName}}">
+              <view class="item_info">
+                <text class="say_name">{{item.nickName}}</text>
+                <text class="say_date">{{common.dataFormat(item.answerTime)}}</text>
+              </view>
+              <view class="item_say">
+                <text>{{item.content}}</text><!--{{wxParseData:item.content.nodes}}-->
+              </view>
+            </view>
+            <view wx:if="{{item.answer.length>0}}" class="i_say">
+              <text>{{item.answer[0].nickName}}</text>
+              <text>：{{item.answer[0].content}}</text><!--{{wxParseData:item.answer[0].content.nodes}}-->
+            </view>
+          </view>
+        </view>
+      </block>
+      <view wx:if="{{detail.answers.length==0}}" class="noTxt">暂无评论喔</view>
+    </view>
+    <view bindtap="toComment" data-type="0" data-url="pages/comment/comment?questionId={{detail.id}}" class="btn_your_thought">
+      评论你的想法
+    </view>
+  </view>
+</view>

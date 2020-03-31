@@ -1,0 +1,18 @@
+<import src="../../components/showToast/showToast.wxml" />
+<template is="showToast" data="{{showToast: showToast}}" />
+<view class="container">
+   <view class="login_img">
+    <view class="logo">
+      <image src="../../assets/doctor_icon_phone@3x.png"  mode="scaleToFill"></image>
+    </view>
+  </view>
+  <view class="login-wrapper">
+    <button class="login-btn" loading="{{login_loading}}" type="primary" size="mini" open-type="getUserInfo" bindgetuserinfo="user_info_app">微信登录</button>
+  </view>
+  <view class="login_fail" wx:if="{{login_fail}}">
+    <view class="login-wrapper">
+      <button type="primary" size="mini" open-type="openSetting" bindopensetting="retry_login">登录失败，重新登录</button>
+    </view>
+    <view class="mt25 login-wrapper"><button type="default" size="mini" bindtap="toIndexPage">不想登录，去逛逛</button></view>
+  </view>
+</view>

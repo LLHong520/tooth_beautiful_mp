@@ -1,0 +1,49 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<import src="../../components/showToast/showToast.wxml" />
+<template is="showToast" data="{{showToast: showToast}}" />
+<view class="container">
+  <loading hidden="{{hide_loading}}">
+    加载中...
+  </loading>
+  <!--tab-->
+  <tabhome curIndex="1"></tabhome>
+  <!--/tab-->
+  <view class="article-wrapper">
+    <view wx:if="{{article.list.length>0}}" class="article-list clearfix">
+      <block wx:for="{{article.list}}" wx:for-item="item"  wx:for-index="index" wx:key="index">
+        <navigator open-type="navigate" url="../../pages/article_detail/article_detail?id={{item.id}}&title=爱牙知识&type=1" class="article-item">
+          <view class="text-wrapper">
+            <text class="title">{{item.title}}</text>
+            <text class="time">{{common.dataFormat(item.pushTime)}} 发布</text>
+          </view>
+          <view class="img-wrapper">
+            <image src="{{common.GET_IMG_URL(item.picUrl)}}" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <!-- 没有数据 -->
+    <view class="no_result" wx:if="{{article.list.length==0&&!article.load_more}}">
+      <image src="../../assets/no-result@3x.png" mode="widthFix"></image>
+      <text>这里空空如也~</text>
+    </view>
+    <!-- /没有数据 -->
+    <!-- 加载中 -->
+    <view class="loading-tip" wx:if="{{article.load_more}}">
+      <image src="../../assets/loading.gif" mode="widthFix"></image>
+      <text>{{article.load_text}}</text>
+    </view>
+    <view class="loading-tip" wx:if="{{article.list.length>0&&article.noMoreArticle}}">
+      <text>木有更多了T_T</text>
+    </view>
+    <!-- /加载中 -->
+  </view>
+  <!--<welfare></welfare>-->
+    <!-- 返回首页 -->
+  <view class="toIndexPage" wx:if="{{isShowIndexIcon}}" bindtap="toIndexPage">
+    <view class="toIndexPage_img">
+      <image src="../../assets/icons/icon_index.png" mode="scaleToFill"/>
+    </view>
+  </view>
+  <!-- /返回首页 -->
+</view>

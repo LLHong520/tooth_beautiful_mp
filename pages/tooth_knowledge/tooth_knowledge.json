@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "爱牙知识",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "tabhome": "../../components/tab_home/tab_home"
+  }
+}

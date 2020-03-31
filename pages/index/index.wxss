@@ -1,0 +1,323 @@
+.tab {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1rpx solid #F5F5F5;
+  position: relative;
+}
+.tab_cell {
+  width: 150rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 74rpx;
+  height: 80rpx;
+}
+.tab_text {
+  padding: 17rpx 0rpx;
+  color: #999;
+}
+.tab_cell.focus .tab_text {
+  color: #51b862;
+  border-bottom: 6rpx solid #51b862;
+}
+.tab_cell .tab_text {
+  border-bottom: 6rpx solid #fff;
+}
+.container {
+  padding: 0 32rpx;
+}
+.home_page {
+  width: 100%;
+}
+swiper {
+  height: 300rpx;
+  margin-top: 10rpx;
+}
+.slide-image {
+  width: 100%;
+  height: 300rpx;
+  background: #f5f5f5;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.slide-image image {
+  width: 100%;
+  height: 184rpx;
+  border-radius: 16rpx;
+  background-color: #f5f5f5;
+}
+.special_area {
+  width: 100%;
+  padding: 32rpx 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.special_area .mouth_area {
+  width: 258rpx;
+  margin: 0 3%;
+}
+.special_area .act_area {
+  width: 198rpx;
+}
+.special_area .questionnaire_area {
+  width: 198rpx;
+  position: relative;
+}
+.special_area .questionnaire_area .free {
+  position: absolute;
+  top: -30rpx;
+  right: -15rpx;
+  color: #fff;
+  font-size: 20rpx;
+  padding: 6rpx 10rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  border: 6rpx solid #f8f8f8;
+  width: 122rpx;
+  line-height: 22rpx;
+  background: #ec453e;
+  box-shadow: 0px 1px 3px 0px rgba(229, 229, 229, 0.5);
+}
+.special_area .area {
+  height: 206rpx;
+  display: inline-block;
+}
+.special_area .area image {
+  width: 100%;
+  height: 206rpx;
+}
+.article-box {
+  position: relative;
+  background: #EBF2FA;
+  padding: 26rpx 26rpx 6rpx;
+  margin-bottom: 20rpx;
+  border-radius: 6px;
+}
+.article-box .icon {
+  position: absolute;
+  content: " ";
+  height: 16rpx;
+  border: 16rpx solid transparent;
+  border-bottom: 16rpx solid #f2f5f8;
+  background: 16rpx solid #f2f5f8;
+  left: 50%;
+  top: -40rpx;
+}
+.article-box .shadow {
+  width: 60rpx;
+  height: 246rpx;
+  position: absolute;
+  right: 26rpx;
+  top: 26rpx;
+  background: linear-gradient(to left, rgba(235, 242, 250, 0.8), rgba(235, 242, 250, 0.2));
+  z-index: 11;
+}
+.article_area {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-radius: 6rpx;
+}
+.article_area .area {
+  display: inline-block;
+  white-space: normal;
+  width: 230rpx;
+  height: 226rpx;
+  margin-bottom: 20rpx;
+  border-radius: 8px;
+  opacity: 0.85;
+  box-shadow: 0rpx 12rpx 20rpx 0rpx #C7DAEC;
+  margin-right: 14rpx;
+  position: relative;
+  z-index: 10;
+  vertical-align: top;
+}
+.article_area .area image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.article_area .area text {
+  color: #2D2D2D;
+  display: block;
+  z-index: 0;
+}
+.article_area .area .content {
+  color: #2D2D2D;
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 40rpx;
+  margin: 70rpx 24rpx 24rpx 24rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 15rpx;
+  z-index: 0;
+  min-height: 59rpx;
+}
+.article_area .area .title {
+  font-size: 22rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.stars-docs {
+  width: 100%;
+  position: relative;
+}
+.com-title {
+  width: 100%;
+  height: 100rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  margin: 50rpx 0 38rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.com-title .title {
+  height: 52rpx;
+  line-height: 52rpx;
+  color: #383838;
+  font-size: 37rpx;
+  font-weight: bold;
+}
+.com-title .ctrl {
+  color: #666666;
+  font-size: 26rpx;
+}
+.doc-border {
+  margin: 0 -32rpx 20rpx;
+  height: 1rpx;
+  border-top: 1rpx solid #F3F3F3;
+}
+.stars-doc-box {
+  position: relative;
+}
+.stars-doc-box .shadow {
+  width: 60rpx;
+  height: 290rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.stars-doc-list {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-bottom: 70rpx;
+  margin: 10rpx 0 0;
+}
+.stars-doc-list .doc-item {
+  display: inline-block;
+  white-space: normal;
+  width: 170rpx;
+  padding: 28rpx;
+  margin-right: 16rpx;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0rpx 8rpx 20rpx 0rpx #ebf0f6;
+  border-radius: 8rpx;
+  border: 1rpx solid #f6f6f6;
+}
+.stars-doc-list image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+.stars-doc-list text {
+  display: block;
+}
+.stars-doc-list .name {
+  color: #2D2D2D;
+  font-size: 26rpx;
+  font-weight: 600;
+  padding: 10rpx 0;
+}
+.stars-doc-list .hospitail {
+  color: #2D2D2D;
+  font-size: 20rpx;
+  margin-bottom: 10rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.stars-doc-list .doc-title {
+  color: #999999;
+  font-size: 20rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.article-wrapper {
+  width: 100%;
+}
+.article-list {
+  width: 100%;
+}
+.article-list .article-item:last-child {
+  margin: 0 -32rpx;
+  padding: 33rpx 32rpx;
+}
+.article-list .article-item:last-child text.time {
+  left: 33rpx;
+}
+.article-item {
+  display: flex;
+  border-bottom: 1px solid #f3f3f3;
+  height: 160rpx;
+  padding: 33rpx 0 33rpx;
+  position: relative;
+}
+.article-item .text-wrapper {
+  flex: 1;
+  padding-right: 30rpx;
+}
+.article-item text {
+  display: block;
+}
+.article-item text.title {
+  color: #383838;
+  font-size: 30rpx;
+  font-weight: 600;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.article-item text.time {
+  position: absolute;
+  left: 0;
+  bottom: 33rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.article-item .img-wrapper {
+  width: 160rpx;
+  height: 160rpx;
+}
+.article-item .img-wrapper image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+}

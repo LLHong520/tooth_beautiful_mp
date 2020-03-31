@@ -1,0 +1,103 @@
+.coupon_page {
+  padding-top: 22rpx;
+  background-color: #fff;
+}
+.detail {
+  display: flex;
+  justify-content: space-between;
+  width: 686rpx;
+  height: 215rpx;
+  margin: 0 auto 32rpx;
+  box-shadow: 0 8rpx 20rpx 0 #ebf0f6;
+  border-radius: 8rpx;
+  border: 1rpx solid #F6F6F6;
+}
+.detail .left {
+  display: flex;
+  flex: 1;
+  border-right: 1rpx dashed #CCCCCC;
+}
+.detail .left .line {
+  width: 10rpx;
+  height: 100%;
+  border-radius: 8rpx 0 0 8rpx;
+  background: linear-gradient(303deg, #a1a8e8 0%, #73abe9 100%);
+}
+.detail .left .content {
+  margin-left: 27rpx;
+  padding-top: 26rpx;
+}
+.detail .left .content text {
+  display: block;
+  font-size: 22rpx;
+  color: #999999;
+  line-height: 30rpx;
+  max-width: 530rpx;
+}
+.detail .left .content .coupon_name {
+  height: 80rpx;
+  font-size: 29rpx;
+  color: #2D2D2D;
+  line-height: 41rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.detail .left .content .coupon_activity {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 14rpx 0 7rpx;
+}
+.detail .right {
+  padding: 0 37rpx;
+  margin: auto 0;
+}
+.detail .right text {
+  display: block;
+  font-size: 22rpx;
+  color: #589BE5;
+  line-height: 26rpx;
+}
+.can_not_use .left {
+  position: relative;
+  border-right: none;
+}
+.can_not_use .left .line {
+  background: #CCCCCC;
+}
+.can_not_use .left .icon {
+  width: 106rpx;
+  height: 106rpx;
+  position: absolute;
+  right: 19rpx;
+  bottom: 16rpx;
+}
+.can_not_use .left .icon image {
+  width: 100%;
+  height: 100%;
+}
+.can_not_use .left .content text {
+  color: #CCCCCC;
+}
+.can_not_use .left .content .coupon_name {
+  color: #999999;
+}
+.can_not_use .right text {
+  color: #CCCCCC;
+}
+.no_result {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+.no_result image {
+  width: 161rpx;
+  margin: 0 auto 70rpx;
+}

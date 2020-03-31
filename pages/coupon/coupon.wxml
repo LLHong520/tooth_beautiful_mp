@@ -1,0 +1,82 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<view class="container">
+  <loading hidden="{{hide_loading}}">加载中...</loading>
+  <view class="coupon_page" wx:if="{{couponlist.list.length > 0}}">
+    <block wx:for="{{couponlist.list}}" wx:key="index">
+      <!-- 立即使用 -->
+      <view 
+      class="detail" 
+      wx:if="{{item.coupon_status == 1}}" 
+      data-num="{{item.coupon_num}}" 
+      bindtap="intoCouponDetail">
+        <view class="left">
+          <view class="line"></view>
+          <view class="content">
+            <text class="coupon_name">{{item.coupon_name}}</text>
+            <text class="coupon_activity">所属活动：{{item.platform_name}}</text>
+            <text class="coupon_date">有效期：{{common.dataFormat(item.begin_time)}}~{{common.dataFormat(item.end_time)}}</text>
+          </view>
+        </view>
+        <view class="right">
+          <text>立</text>
+          <text>即</text>
+          <text>使</text>
+          <text>用</text>
+        </view>
+      </view>
+      <!-- 立即使用 -->
+      <!-- 已过期 -->
+      <view class="detail can_not_use over_due" 
+      wx:if="{{item.coupon_status == 3}}"
+      data-num="{{item.coupon_num}}" 
+      bindtap="intoCouponDetail"
+      >
+        <view class="left">
+          <view class="line"></view>
+            <view class="content">
+              <text class="coupon_name">{{item.coupon_name}}</text>
+              <text class="coupon_activity">所属活动：{{item.platform_name}}</text>
+              <text class="coupon_date">有效期：{{common.dataFormat(item.begin_time)}}~{{common.dataFormat(item.end_time)}}</text>
+          </view>
+          <view class="icon">
+            <image src="./images/tag_coupon_overdue@2x.png"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 已过期 -->
+      <!-- 已使用 -->
+      <view class="detail can_not_use used" wx:if="{{item.coupon_status == 2}}"
+      data-num="{{item.coupon_num}}" 
+      bindtap="intoCouponDetail"
+      >
+        <view class="left">
+          <view class="line"></view>
+          <view class="content">
+            <text class="coupon_name">{{item.coupon_name}}</text>
+            <text class="coupon_activity">所属活动：{{item.platform_name}}</text>
+            <text class="coupon_date">有效期：{{common.dataFormat(item.begin_time)}}~{{common.dataFormat(item.end_time)}}</text>
+          </view>
+          <view class="icon">
+            <image src="./images/tag_coupon_use@2x.png"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 已使用 -->
+    </block>
+  </view>
+  <!-- 没有数据 -->
+  <view class="no_result" wx:if="{{couponlist.list.length==0&&!couponlist.load_more}}">
+    <image src="../../assets/no-result@3x.png" mode="widthFix"></image>
+    <text>这里空空如也~</text>
+  </view>
+  <!-- /没有数据 -->
+  <!-- 加载中 -->
+  <view class="loading-tip" wx:if="{{couponlist.load_more}}">
+    <image src="../../assets/loading.gif" mode="widthFix"></image>
+    <text>{{couponlist.load_text}}</text>
+  </view>
+  <view class="loading-tip" wx:if="{{couponlist.list.length>0&&doclist.noMoreDoc}}">
+    <text>木有更多了T_T</text>
+  </view>
+  <!-- /加载中 -->
+</view>

@@ -1,0 +1,110 @@
+.coupon_page {
+  padding-top: 22rpx;
+  background-color: #fff;
+}
+.detail {
+  display: flex;
+  justify-content: space-between;
+  width: 686rpx;
+  height: 215rpx;
+  margin: 0 auto 32rpx;
+  box-shadow: 0 8rpx 20rpx 0  rgba(235,240,246,1);
+  border-radius: 8rpx;
+  border: 1rpx solid #F6F6F6;
+  .left {
+    display: flex;
+    flex: 1;
+    border-right: 1rpx dashed #CCCCCC;
+    .line {
+      width: 10rpx;
+      height: 100%;
+      border-radius: 8rpx 0 0 8rpx;
+      background: linear-gradient(303deg,rgba(161,168,232,1) 0%,rgba(115,171,233,1) 100%);
+    }
+    .content {
+      margin-left: 27rpx;
+      padding-top: 26rpx;
+      text {
+        display: block;
+        font-size: 22rpx;
+        color: #999999;
+        line-height: 30rpx;
+        max-width: 530rpx;
+      }
+      .coupon_name {
+        height: 80rpx;
+        font-size: 29rpx;
+        color: #2D2D2D;
+        line-height: 41rpx;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      .coupon_activity {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 14rpx 0 7rpx;
+      }
+    }
+  }
+  .right {
+    padding: 0 37rpx;
+    margin: auto 0;
+    text {
+      display: block;
+      font-size: 22rpx;
+      color: #589BE5;
+      line-height: 26rpx;
+    }
+  }
+}
+.can_not_use {
+  .left {
+    position: relative;
+    border-right: none;
+    .line {
+      background: #CCCCCC;
+    }
+    .icon {
+      width: 106rpx;
+      height: 106rpx;
+      position: absolute;
+      right: 19rpx;
+      bottom: 16rpx;
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .content {
+      text {
+        color: #CCCCCC;
+      }
+      .coupon_name {
+        color: #999999;
+      }
+    }
+  }
+  .right {
+    text {
+      color: #CCCCCC;
+    }
+  }
+}
+
+.no_result{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform:translate(-50%,-50%);
+  padding: 0;
+}
+.no_result image{
+  width: 161rpx;
+  margin:0 auto 70rpx;
+}

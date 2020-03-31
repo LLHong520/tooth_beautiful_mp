@@ -1,0 +1,150 @@
+.c_main {
+  color: #51b862 !important;
+}
+.c_error {
+  color: #FF5757!important;
+}
+.c_666 {
+  color: #666;
+}
+.c_888 {
+  color: #888;
+}
+.c_999 {
+  color: #999 !important;
+}
+.c_blue {
+  color: #6082b9;
+}
+.c_f60 {
+  color: #ff6600;
+}
+.c_aaa {
+  color: #aaa;
+}
+.c_555 {
+  color: #555;
+}
+.bold {
+  font-weight: bold;
+}
+.c_yellow {
+  color: #ffc31a;
+}
+.c_orange {
+  color: #F5A623!important;
+}
+.c_green {
+  color: #51b862;
+}
+.c_main {
+  color: #51b862;
+}
+.border-lan {
+  width: 100%;
+  height: 20rpx;
+  background: #EFEFEF;
+}
+.bor_cob {
+  border-bottom: 1px solid #EFEFEF;
+}
+.font_m {
+  font-size: 20rpx;
+}
+.font_s {
+  font-size: 22rpx;
+}
+.font_l {
+  font-size: 24rpx;
+}
+.font_xl {
+  font-size: 26rpx;
+}
+.font_2xl {
+  font-size: 30rpx;
+}
+.font_3xl {
+  font-size: 32rpx;
+}
+.font_4xl {
+  font-size: 36rpx;
+}
+.container {
+  padding: 0 32rpx;
+}
+.doc_list {
+  width: 100%;
+}
+.doc_info {
+  display: flex;
+  align-items: center;
+}
+.doc_item {
+  width: 100%;
+  padding: 26rpx;
+  margin: 22rpx auto;
+  background-color: #fff;
+  border: 1rpx solid #F6F6F6;
+  border-radius: 8rpx;
+  box-shadow: 0 8rpx 20rpx 0 #ebf0f6;
+  box-sizing: border-box;
+}
+.doc_item image {
+  display: block;
+  width: 106rpx;
+  height: 106rpx;
+  border-radius: 50%;
+  align-self: flex-start;
+}
+.doc_item .doc_msg {
+  width: 336rpx;
+  margin-left: 20rpx;
+  margin-right: 50rpx;
+}
+.doc_item .doc_msg text {
+  display: block;
+  color: #2D2D2D;
+}
+.doc_item .doc_msg .doc_name {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.doc_item .doc_msg .doc_place {
+  font-size: 24rpx;
+  max-width: 336rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 8rpx;
+}
+.doc_item .btn_consult {
+  font-size: 23rpx;
+  color: #fff;
+  line-height: 40rpx;
+  background: #589BE5;
+  box-shadow: 0rpx 5rpx 14rpx -2rpx #9ECCFF;
+  border-radius: 20rpx;
+  padding: 0 12rpx;
+}
+.doc_label {
+  display: flex;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.doc_label .label {
+  white-space: nowrap;
+  display: block;
+  font-size: 20rpx;
+  color: #999999;
+  padding: 5rpx 13rpx;
+  background-color: #EBF2FA;
+  border-radius: 22rpx;
+  margin-right: 10rpx;
+  box-sizing: border-box;
+}
+.doc_label .label:last-child {
+  margin-right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

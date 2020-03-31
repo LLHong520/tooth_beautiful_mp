@@ -1,0 +1,78 @@
+.container {
+  padding: 70rpx 0 0 0;
+}
+
+.home_page {
+  width: 100%;
+}
+
+.article-wrapper {
+  width: 100%;
+  margin-top: 10rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+
+.article-list {
+  width: 100%;
+}
+
+.article-item {
+  display: flex;
+  border-bottom: 1px solid rgba(243, 243, 243, 1);
+  height: 160rpx;
+  padding: 33rpx 0;
+  position: relative;
+  .text-wrapper {
+    flex: 1;
+    padding-right: 30rpx;
+  }
+  text {
+    display: block;
+  }
+  text.title {
+    color: #383838;
+    font-size: 30rpx;
+    font-weight: 600;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  text.time {
+    position: absolute;
+    left: 0;
+    bottom: 33rpx;
+    color: #999999;
+    font-size: 24rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .img-wrapper {
+    width: 160rpx;
+    height: 160rpx;
+    image {
+      width: 100%;
+      height: 100%;
+      border-radius: 8rpx;
+    }
+  }
+}
+
+.btn_wrapper {
+  position: fixed;
+  right: 0;
+  bottom: 112rpx;
+  width: 160rpx;
+  height: 200rpx;
+  image {
+    width: 100%;
+    height: auto;
+  }
+}

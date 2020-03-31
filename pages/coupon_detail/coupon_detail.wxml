@@ -1,0 +1,53 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<view class="container">
+  <view class="coupon_detail_page">
+    <view class="coupon_detail">
+      <view class="content">
+        <text class="coupon_name">{{couponObject.coupon_name}}</text>
+        <text class="coupon_activity">所属活动：{{couponObject.platform_name}}</text>
+        <text class="coupon_date">有效期：{{common.dataFormat(couponObject.begin_time)}}~{{common.dataFormat(couponObject.end_time)}}</text>
+      </view>
+      <!-- 已过期图标 -->
+      <view class="icon" wx:if="{{couponObject.coupon_status == 3}}">
+        <image src="./images/tag_coupon_overdue@2x.png"></image>
+      </view>
+      <!-- 已过期图标 -->
+      <!-- 已使用图标 -->
+      <view class="icon" wx:elif="{{couponObject.coupon_status == 2}}">
+        <image src="./images/tag_coupon_use@2x.png"></image>
+      </view>
+      <!-- 已使用图标 -->
+    </view>
+    <view class="coupon_code">
+      <view class="two_circle top_two_circle">
+        <view class="circle left_circle"></view>
+        <view class="circle right_circle"></view>
+      </view>
+      <view class="text_title">优惠券码</view>
+      <view class="code_num">
+        <view>券码：</view>
+        <!-- 如果优惠券可使用，删除类名delete -->
+        <view wx:if="{{couponObject.coupon_status == 1}}">
+          {{couponObject.coupon_num}}
+        </view>
+        <view class="delete" wx:else>
+          {{couponObject.coupon_num}}
+        </view>
+      </view>
+      <view class="two_circle bottom_two_circle">
+        <view class="circle left_circle"></view>
+        <view class="circle right_circle"></view>
+      </view>
+    </view>
+    <view class="coupon_place" wx:if="{{hospitalDetail.length > 0}}">
+      <view class="text_title">适用门店</view>
+      <view class="palce_address" wx:for="{{hospitalDetail}}" wx:key="index">
+        <view class="point"></view>
+        <view>
+          <text class="name">{{item.hospital_name}}</text>
+          <text class="address">{{item.hospital_address}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

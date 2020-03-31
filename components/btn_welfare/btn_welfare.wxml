@@ -1,0 +1,6 @@
+<view wx:if="{{showBtn}}" class="btn_welfare">
+  <view bindtap="close" class="close">×</view>
+  <navigator open-type="navigate" url="../../pages/welfare/welfare">
+    <image src="../../assets/integral/btn_pop_questionnaire@2x.png" mode="widthFix"></image>
+  </navigator>
+</view>

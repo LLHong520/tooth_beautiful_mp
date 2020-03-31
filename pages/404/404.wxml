@@ -1,0 +1,10 @@
+<view class="container">
+  <!-- 发表 -->
+  <view class="post_404_wrapper">
+    <image  src="../../assets/no-result@3x.png" mode="widthFix"></image>
+    <text class="big">啊哦，页面出错了耶~</text>
+    <text>可能是因为您的链接地址有误，该页面已经被作者删除或转为私密状态。</text>
+    <view class="mt25"><button size="mini" type="button" bindtap="toIndexPage">去逛逛首页</button></view>
+  </view>
+  <!-- /发表 -->
+</view>

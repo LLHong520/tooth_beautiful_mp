@@ -1,0 +1,153 @@
+.container {
+  padding: 0 32rpx;
+}
+.post_topic_wrapper{
+  width: 100%;
+  box-sizing: border-box;
+}
+.form {
+  background-color: #fff;
+  color: #aaa;
+}
+.form  .inp_text_wrapper {
+  padding: 28rpx 10rpx;
+  border-bottom: 1rpx dashed #D9D9D9;
+}
+.form .none-border{
+  border:none
+}
+.form  textarea.content {
+  width: 100%;
+  height: 500rpx;
+  line-height: 30rpx;
+  font-size:32rpx;
+  color:#2D2D2D;
+  border: 0;
+  z-index:0;
+}
+.form input.title{
+  width: 100%;
+  line-height: 28rpx;
+  color:#2D2D2D;
+  font-size:40rpx;
+  border: 0;
+  background: none;
+}
+.form .inp_text {
+  line-height: 20rpx;
+  height: 20rpx;
+  width: 100%;
+  font-size: 26rpx;
+  border: 0;
+}
+.post_topic_action{
+  width:100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9998;
+  text-align:center;
+  padding: 0;
+  border-top:1px solid #EFEFEF;
+  font-size: 30rpx;
+}
+.primary_btn{
+  margin: 0rpx;
+  background:rgba(88,155,229,1)!important;
+  box-shadow:0rpx 7rpx 26rpx -2rpx rgba(115,182,255,1);
+  border-radius:45rpx;
+  margin:20rpx;
+}
+
+/*选择图片*/
+.tag_wrapper .icons{
+  display: flex;
+  padding: 15rpx;
+}
+.tag_wrapper .icon-pic,.tag_wrapper .icon-label{
+  width:44rpx;
+  height: 44rpx;
+}
+/*帖子图片*/
+.post_images{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+}
+.post_images .post_images_item{
+  width: 158rpx;
+  height: 158rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #F5F5F5;
+  position: relative;
+}
+.post_images .post_item{
+  width: 158rpx;
+  height: 158rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  border: 2rpx dashed #C3C3C3;
+  border-radius:8rpx;
+  background:#F7F9FC;
+  position: relative;
+}
+.post_images .post_item image{
+  display:block;
+  width:64rpx;
+  height:49rpx;
+  margin:40rpx auto 14rpx;
+  background:none
+}
+.post_images .post_item .imgTxt{
+  display:block;
+  width:100rpx;
+  text-align:center;
+  font-size: 22rpx;
+  margin:0 auto;
+}
+.post_images .post_images_item .tip{
+  font-size: 24rpx;
+  text-align: center;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15rpx 0;
+  background-color: rgba(0,0,0,.6);
+  color: #fff;
+}
+.post_images .post_images_item .tip.suc{
+  background-color: #08bda0;
+  opacity:0.6;
+  color: #fff;
+}
+.post_images .post_images_item .tip.err{
+  background-color: #f60;
+  color: #fff;
+}
+.post_images .post_images_item .icon-del{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top:-20rpx;
+  right: -10px;
+}
+.post_images .post_images_item .img{
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ccc;
+}

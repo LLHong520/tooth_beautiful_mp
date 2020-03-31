@@ -1,0 +1,38 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<import src="../../components/showToast/showToast.wxml" />
+<template is="showToast" data="{{showToast: showToast}}" />
+<view class="container">
+  <loading hidden="{{hide_loading}}">
+    加载中...
+  </loading>
+  <view class="article-wrapper">
+    <view wx:if="{{article.list.length>0}}" class="article-list clearfix">
+      <block wx:for="{{article.list}}" wx:for-item="item"  wx:for-index="index" wx:key="index">
+        <navigator open-type="navigate" url="../../pages/question_detail/question_detail?id={{item.id}}" class="article-item">
+          <view class="text-wrapper">
+            <text class="title">{{item.title}}</text>
+            <text class="time">{{common.dataFormat(item.createTime)}} 发布</text>
+          </view>
+          <view class="img-wrapper">
+            <image src="{{common.GET_IMG_URL(item.img[0])}}" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <!-- 没有数据 -->
+    <view class="no_result" wx:if="{{article.list.length==0&&!article.load_more}}">
+      <image src="../../assets/no-result@3x.png" mode="widthFix"></image>
+      <text>这里空空如也~</text>
+    </view>
+    <!-- /没有数据 -->
+    <!-- 加载中 -->
+    <view class="loading-tip" wx:if="{{article.load_more}}">
+      <image src="../../assets/loading.gif" mode="widthFix"></image>
+      <text>{{article.load_text}}</text>
+    </view>
+    <view class="loading-tip" wx:if="{{article.list.length>0&&article.noMoreArticle}}">
+      <text>木有更多了T_T</text>
+    </view>
+    <!-- /加载中 -->
+  </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "本周明星医生",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+   "no_result": "../../components/no-result/no-result",
+   "loading_tip": "../../components/loading-tip/loading-tip",
+   "confirmconsult": "../../components/confirm_com/confirm_com",
+   "confirm": "../../components/confirm/confirm"
+ }
+}

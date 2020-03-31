@@ -1,0 +1,137 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<import src="../../components/showToast/showToast.wxml" />
+<template is="showToast" data="{{showToast: showToast}}" />
+<view class="container">
+  <loading hidden="{{hide_loading}}">
+    加载中...
+  </loading>
+  <confirmconsult
+   wx:if="{{showConfirmConsult}}"
+   title="留下您的电话，医生收到后会第一时间回复您 ^ ^"
+   placeholder="输入手机号码"
+   bind:confirm="confirm"
+   bind:cancel="cancel"
+  ></confirmconsult>
+  <view class="home_page">
+    <!-- 轮播 广告-->
+    <swiper wx:if="{{banners.length>0}}" indicator-color="rgba(255, 255, 255, .6)" indicator-active-color="#fff" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{500}}">
+      <block wx:for="{{banners}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <swiper-item>
+          <view bindtap="tobannerPage" data-item="{{item}}">
+            <image src="{{common.GET_IMG_URL(item.img)}}" class="slide-image" mode="scaleToFill" />
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- /轮播 广告-->
+  </view>
+  <view class="special_area clearfix">
+    <navigator open-type="redirect" url="../../pages/tooth_acts/tooth_acts" class="act_area area">
+      <image src="../../assets/integral/home_icon_events@2x.png" class="area-image" />
+    </navigator>
+    <navigator open-type="switchTab" url="../../pages/find/find" class="mouth_area area">
+      <image src="../../assets/integral/home_icon_features@2x.png" class="area-image" />
+    </navigator>
+    <navigator open-type="navigate" url="../../pages/correction_ask/correction_ask" class="questionnaire_area area">
+      <!--<span class="free">免费就诊机会</span>-->
+      <image src="../../assets/integral/home_icon_questionnaire@2x.png" class="area-image" />
+    </navigator>
+  </view>
+  <view wx:if="{{artList.length>0}}" class="article-box">
+    <view class="icon"></view>
+    <view class="article_area">
+      <block wx:for="{{artList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <navigator open-type="navigate" url="../find_lan/find_lan?id={{item.id}}" class="area">
+          <text class="content">{{item.specialName}}</text>
+          <image wx:if="{{index%2==0}}" src="../../assets/integral/art_bg_2@2x.png" />
+          <image wx:else src="../../assets/integral/art_bg_1@2x.png" />
+        </navigator>
+      </block>
+    </view>
+    <view class="shadow"></view>
+  </view>
+  <view class="stars-docs">
+    <view class="com-title">
+      <text class="title">本周明星医生</text>
+      <view bindtap="toSomePage" data-url="../../pages/docs/docs" class="ctrl">查看全部</view>
+    </view>
+    <view wx:if="{{docList.length>0}}" class="stars-doc-box">
+      <view class="stars-doc-list clearfix">
+        <block wx:for="{{docList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view bindtap="consult" data-id="{{item.id}}" class="doc-item">
+            <image src="{{common.GET_IMG_URL(item.img)}}" />
+            <text class="name">{{item.name}}</text>
+            <text class="hospitail">{{item.introduce}}</text>
+            <text class="doc-title">{{item.label[0] || "\n"}}</text>
+          </view>
+        </block>
+      </view>
+      <view class="shadow"></view>
+    </view>
+    <view class="doc-border"></view>
+  </view>
+  <view class="article-wrapper">
+    <view class="com-title">
+      <text class="title">矫正案例</text>
+      <navigator open-type="redirect" url="../../pages/correction_case/correction_case" class="ctrl">查看全部</navigator>
+    </view>
+    <view class="article-list clearfix">
+      <block wx:for="{{caseList}}" wx:for-item="item"  wx:for-index="index" wx:key="index">
+        <navigator open-type="navigate" url="../../pages/article_detail/article_detail?id={{item.id}}&title=矫正案例&type=2" class="article-item">
+          <view class="text-wrapper">
+            <text class="title">{{item.title}}</text>
+            <text class="time">{{common.dataFormat(item.pushTime)}} 发布</text>
+          </view>
+          <view class="img-wrapper">
+            <image src="{{common.GET_IMG_URL(item.picUrl)}}" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <view class="article-wrapper">
+    <view class="com-title">
+      <text class="title">爱牙知识</text>
+      <navigator open-type="redirect" url="../../pages/tooth_knowledge/tooth_knowledge" class="ctrl">查看全部</navigator>
+    </view>
+    <view class="article-list clearfix">
+      <block wx:for="{{knowledgeList}}" wx:for-item="item"  wx:for-index="index" wx:key="index">
+        <navigator open-type="navigate" url="../../pages/article_detail/article_detail?id={{item.id}}&title=爱牙知识&type=1" class="article-item">
+          <view class="text-wrapper">
+            <text class="title">{{item.title}}</text>
+            <text class="time">{{common.dataFormat(item.pushTime)}} 发布</text>
+          </view>
+          <view class="img-wrapper">
+            <image src="{{common.GET_IMG_URL(item.picUrl)}}" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <view class="article-wrapper">
+    <view class="com-title">
+      <text class="title">矫正问答</text>
+      <navigator open-type="redirect" url="../../pages/correction_ask/correction_ask" class="ctrl">查看全部</navigator>
+    </view>
+    <view class="article-list clearfix">
+      <block wx:for="{{askList}}" wx:for-item="item"  wx:for-index="index" wx:key="index">
+        <navigator open-type="navigate" url="../../pages/question_detail/question_detail?id={{item.id}}" class="article-item">
+          <view class="text-wrapper">
+            <text class="title">{{item.title}}</text>
+            <text class="time">{{common.dataFormat(item.createTime)}} 发布</text>
+          </view>
+          <view class="img-wrapper">
+            <image src="{{common.GET_IMG_URL(item.img[0])}}" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!-- 返回首页 -->
+  <view class="toIndexPage" wx:if="{{isShowIndexIcon}}" bindtap="toIndexPage">
+    <view class="toIndexPage_img">
+      <image src="../../assets/icons/icon_index.png" mode="scaleToFill"/>
+    </view>
+  </view>
+  <!-- /返回首页 -->
+</view>

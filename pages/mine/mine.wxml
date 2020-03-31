@@ -1,0 +1,63 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<import src="../../components/showToast/showToast.wxml" />
+<template is="showToast" data="{{showToast: showToast}}" />
+<view class="container">
+  <confirm
+   wx:if="{{showConfirm}}"
+   title="您还未登录，是否微信授权去登陆？"
+   bind:confirm="confirmLogin"
+   bind:cancel="cancel"
+  ></confirm>
+  <confirmcoupon
+    wx:if="{{showConfirmCoupon}}"
+    title="领取成功后，凭借兑换码，可在对应门店享受优惠折扣 ^ ^"
+    placeholder="输入优惠券编码"
+    confirmBtnText="领取"
+    showImgDefault="{{showImgDefault}}"
+    bind:confirm="confirm"
+    bind:cancel="cancel"
+  ></confirmcoupon>
+  <!-- 用户信息 -->
+ <view class="user-info-wrapper">
+   <view bindtap="confirmLogin" class="user-info clearfix">
+     <view class="avater">
+       <image src="{{common.GET_IMG_URL(userInfo.avatarUrl,'u')}}"  mode="scaleToFill"></image>
+     </view>
+     <view class="other-wrapper">
+       <view wx:if="{{islogin}}" class="nick-name">{{userInfo.nickName}}</view>
+       <view wx:else class="nick-name">点击头像登录</view>
+     </view>
+   </view>
+ </view>
+ <!-- /用户信息 -->
+
+ <!-- 用户导航 -->
+  <view class="user-navs">
+    <view class="nav-item" bindtap="openCoupon">
+      <view class="item_wrapper">
+        <image class="mr15"  src="../../assets/integral/me_icon_git@2x.png" mode="widthFix"></image>
+        <text class="tabname">兑换优惠券</text>
+      </view>
+      <image class="arrow-right"  src="../../assets/integral/btn_enter@2x.png" mode="widthFix"></image>
+     </view>
+    <view bindtap="toPage" data-url="../../pages/coupon/coupon">
+     <view class="nav-item">
+       <view class="item_wrapper">
+         <image class="mr15"  src="../../assets/integral/me_icon_coupon@2x.png" mode="widthFix"></image>
+         <text class="tabname">已领取优惠券</text>
+       </view>
+       <image class="arrow-right"  src="../../assets/integral/btn_enter@2x.png" mode="widthFix"></image>
+     </view>
+   </view>
+   <view bindtap="toPage" data-url="../../pages/my_question/my_question">
+    <view  class="nav-item">
+      <view class="item_wrapper">
+        <image class="mr15"  src="../../assets/integral/me_icon_ask@2x.png" mode="widthFix"></image>
+        <text class="tabname">我的提问</text>
+      </view>
+      <image class="arrow-right"  src="../../assets/integral/btn_enter@2x.png" mode="widthFix"></image>
+    </view>
+  </view>
+  </view>
+  <!-- 用户导航 -->
+</view>

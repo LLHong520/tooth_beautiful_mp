@@ -1,0 +1,20 @@
+<view class="container">
+  <loading hidden="{{!loading}}">
+    发布中...
+  </loading>
+  <!-- 发表 -->
+  <view class="post_topic_wrapper">
+    <view class="form">
+      <form bindsubmit="formSubmit">
+      <view class="inp_text_wrapper none-border">
+        <textarea bindinput="countTxt" name="content" maxlength="200" placeholder="{{placeholder}}" ></textarea>
+        <view class="count">剩余输入{{count}}</view>
+      </view>
+      <view class="post_topic_action">
+        <button class="primary_btn" formType="submit" type="primary" loading="{{loading}}"  disabled="{{disabled}}">提交</button>
+      </view>
+     </form>
+    </view>
+  </view>
+  <!-- /发表 -->
+</view>

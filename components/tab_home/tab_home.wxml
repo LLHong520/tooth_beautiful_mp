@@ -1,0 +1,12 @@
+<view class="tab">
+  <view bindtap="toHome" class="tab_cell">
+    <text class="tab_text">首页</text>
+    <text class="border"></text>
+  </view>
+  <block wx:for="{{tabInfo}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+    <navigator open-type="redirect" url="{{item.url}}" class="tab_cell {{curIndex==index? 'focus':''}}">
+      <text class="tab_text">{{item.name}}</text>
+      <text class="border"></text>
+    </navigator>
+  </block>
+</view>

@@ -1,0 +1,41 @@
+<view class="container">
+  <loading hidden="{{!loading}}">
+    发帖中...
+  </loading>
+  <!-- 发表 -->
+  <view class="post_topic_wrapper">
+    <view class="form">
+      <form bindsubmit="formSubmit">
+      <view class="inp_text_wrapper">
+        <input class="title" name="title" maxlength="60"  placeholder="请输入标题" />
+      </view>
+      <view class="inp_text_wrapper none-border">
+        <textarea class="content" name="content" maxlength="500"  placeholder="请输入正文（不超过500字）" ></textarea>
+      </view>
+      <!-- 图片上传 -->
+      <view wx:if="imgFiles.length" class="post_images">
+        <block wx:for="{{imgFiles}}" wx:for-item="item"  wx:for-index="index" wx:key="index">
+          <view class="post_images_item">
+            <image class="icon-del" data-index="{{index}}" bindtap="delImg"  src="../../assets/icon-x@3x.png" mode="heightFix"></image>
+            <image bindtap="previewImages" data-url="{{item.url}}" class="img"  src="{{item.url}}" mode="scaleToFill"></image>
+            <text class="tip" wx:if="{{item.status==0}}">等待上传</text>
+            <text class="tip err" bindtap="reUpload(index)" wx:if="{{item.status==-1}}">重新上传</text>
+            <text class="tip" wx:if="{{item.status==2}}">上传中</text>
+            <text class="tip suc" wx:if="{{item.status==1}}">已上传</text>
+         </view>
+        </block>
+        <view class="post_item" bindtap="chooseImg">
+          <image src="../../assets/integral/icon_camera@2x.png"></image>
+          <text class="imgTxt">{{imgFiles.length}} / 5</text>
+        </view>
+      </view>
+      <!-- /图片上传 -->
+      <view class="post_topic_action">
+        <!--<text class=""></text>-->
+        <button class="primary_btn" formType="submit" type="primary" loading="{{loading}}"  disabled="{{disabled}}">提交</button>
+      </view>
+     </form>
+    </view>
+  </view>
+  <!-- /发表 -->
+</view>

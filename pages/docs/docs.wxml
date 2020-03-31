@@ -1,0 +1,60 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<import src="../../components/showToast/showToast.wxml" />
+<template is="showToast" data="{{showToast: showToast}}" />
+<view class="container">
+  <loading hidden="{{hide_loading}}">
+    加载中...
+  </loading>
+  <confirm
+   wx:if="{{showConfirm}}"
+   title="您还未登录，是否微信授权去登陆？"
+   bind:confirm="confirmLogin"
+   bind:cancel="cancel"
+  ></confirm>
+  <confirmconsult
+   wx:if="{{showConfirmConsult}}"
+   title="留下您的电话，医生收到后会第一时间回复您 ^ ^"
+   placeholder="输入手机号码"
+   bind:confirm="confirm"
+   bind:cancel="cancel"
+  ></confirmconsult>
+  <view wx:if="{{doclist.list.length>0}}" class="doc_list">
+    <block wx:for="{{doclist.list}}" wx:for-item="item"  wx:for-index="index" wx:key="index">
+      <view class="doc_item">
+        <view class="doc_info">
+          <image src="{{common.GET_IMG_URL(item.img)}}" />
+          <view class="doc_msg">
+            <text class="doc_name">{{item.name}}</text>
+            <text class="doc_place">{{item.introduce}}</text>
+          </view>
+          <button class="btn_consult" bindtap="consult" data-id="{{item.id}}">向他咨询</button>
+        </view>
+        <view class="doc_label">
+          <text wx:for="{{item.label}}" wx:for-item="item"  wx:for-index="index" wx:key="index" wx:if="{{index<4}}" class="label">{{item}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 没有数据 -->
+  <view class="no_result" wx:if="{{doclist.list.length==0&&!doclist.load_more}}">
+    <image src="../../assets/no-result@3x.png" mode="widthFix"></image>
+    <text>这里空空如也~</text>
+  </view>
+  <!-- /没有数据 -->
+  <!-- 加载中 -->
+  <view class="loading-tip" wx:if="{{doclist.load_more}}">
+    <image src="../../assets/loading.gif" mode="widthFix"></image>
+    <text>{{doclist.load_text}}</text>
+  </view>
+  <view class="loading-tip" wx:if="{{doclist.list.length>0&&doclist.noMoreDoc}}">
+    <text>木有更多了T_T</text>
+  </view>
+  <!-- /加载中 -->
+    <!-- 返回首页 -->
+  <view class="toIndexPage" wx:if="{{isShowIndexIcon}}" bindtap="toIndexPage">
+    <view class="toIndexPage_img">
+      <image src="../../assets/icons/icon_index.png" mode="scaleToFill"/>
+    </view>
+  </view>
+  <!-- /返回首页 -->
+</view>

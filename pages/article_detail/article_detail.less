@@ -1,0 +1,180 @@
+.question_detail {
+  padding: 0 32rpx;
+  .detail {
+    padding: 30rpx 0 50rpx;
+    background-color: #fff;
+    .question {
+      font-size: 40rpx;
+      color: #383838;
+      line-height: 56rpx;
+      font-weight: bold;
+    }
+    .article_content {
+      color: #424242;
+      font-size: 33rpx;
+    }
+  }
+}
+
+.user_info {
+  padding: 30rpx 0;
+  color: #999;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+  .photo {
+    display: block;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background: #f5f5f5;
+  }
+  .user_msg {
+    margin-left: 13rpx;
+    text {
+      line-height: 37rpx;
+    }
+    .user_form {
+      font-size: 28rpx;
+      color: #666;
+      display: block;
+      .user_name {
+        color: #2D2D2D;
+      }
+    }
+    .user_date {
+      display: block;
+      font-size: 26rpx;
+      color: #999999;
+    }
+  }
+}
+
+.article_content {
+  overflow: hidden;
+  image {
+    width: auto;
+    height: auto;
+  }
+}
+
+//病例分析
+.disease-box {
+  background: #F3F4F5;
+  padding: 32rpx 32rpx 240rpx;
+}
+
+.disease-wrapper {
+  background: #fff;
+  padding: 0 32rpx 32rpx;
+  .no-text {
+    padding: 20rpx 32rpx;
+    color: #CCCCCC;
+    font-size: 26rpx;
+    text-align: center;
+  }
+  .title {
+    color: #424242;
+    font-size: 32rpx;
+    font-weight: bold;
+    padding: 45rpx 32rpx;
+    text-align: center;
+  }
+}
+
+.dis-analy {
+  position: relative;
+}
+
+.dis-analy p span.txthide,
+.desc_disease p span.txthide {
+  display: inline-block;
+  margin-top: 0;
+  color: #ccc;
+  background-color: #ccc;
+}
+
+.dis-analy p a,
+.desc_disease p a {
+  color: #6082B9
+}
+
+.dis-analy-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10rpx;
+  .faceImg {
+    width: 80rpx;
+    height: 80rpx;
+    display: inline-block;
+    image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #f5f5f5;
+    }
+  }
+  .dis-analy-content {
+    position: relative;
+    max-width: 420rpx;
+    margin-bottom: 40rpx;
+    display: inline-block;
+    margin-left: 20rpx;
+    border-radius: 10rpx;
+    padding: 30rpx 40rpx;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    &:before {
+      position: absolute;
+      content: ' ';
+      border: 10rpx solid transparent;
+    }
+  }
+  .dis-analy-content p {
+    padding: 10rpx 0;
+  }
+  .dis-analy-content image {
+    width: 100rpx; // heigth:50px!important;
+    float: left;
+    margin: 0 20rpx 20rpx 20rpx;
+  }
+  .triangle_l {
+    background: #589BE5;
+    color: #fff;
+    font-size: 28rpx;
+    &:before {
+      border-right: 16rpx solid #589BE5;
+      left: -23rpx;
+      top: 40rpx;
+    }
+  }
+  .triangle_r {
+    background: #F7F9FC;
+    color: #424242;
+    font-size: 28rpx;
+    &:before {
+      border-left: 16rpx solid #F7F9FC;
+      right: -24rpx;
+      top: 40rpx;
+    }
+  }
+}
+
+.type_disease {
+  justify-content: flex-end;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+//全局遮罩
+.txthide {
+  display: inline-block;
+  margin-top: 0;
+  color: #ccc;
+  background-color: #ccc;
+  // display: none!important;
+}

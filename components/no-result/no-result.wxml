@@ -1,0 +1,5 @@
+<view class="no-result">
+  <image wx:if="{{showimg}}" src="../../assets/no-result@3x.png" mode="widthFix"></image>
+  <text class="tip">{{title}}</text>
+  <slot></slot>
+</view>

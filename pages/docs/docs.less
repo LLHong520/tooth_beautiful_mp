@@ -1,0 +1,85 @@
+@import '../../assets/less/common.less';
+//医生列表
+.container {
+  padding: 0 32rpx;
+}
+
+.doc_list {
+  width: 100%;
+}
+
+.doc_info {
+  display: flex;
+  align-items: center;
+}
+
+.doc_item {
+  width: 100%;
+  padding: 26rpx;
+  margin: 22rpx auto;
+  background-color: #fff;
+  border: 1rpx solid #F6F6F6;
+  border-radius: 8rpx;
+  box-shadow: 0 8rpx 20rpx 0 rgba(235, 240, 246, 1);
+  box-sizing: border-box;
+  image {
+    display: block;
+    width: 106rpx;
+    height: 106rpx;
+    border-radius: 50%;
+    align-self: flex-start;
+  }
+  .doc_msg {
+    width: 336rpx;
+    margin-left: 20rpx;
+    margin-right: 50rpx;
+    text {
+      display: block;
+      color: #2D2D2D;
+    }
+    .doc_name {
+      font-size: 30rpx;
+      font-weight: bold;
+    }
+    .doc_place {
+      font-size: 24rpx;
+      max-width: 336rpx;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: 8rpx;
+    }
+  }
+  .btn_consult {
+    font-size: 23rpx;
+    color: #fff;
+    line-height: 40rpx;
+    background: #589BE5;
+    box-shadow: 0rpx 5rpx 14rpx -2rpx #9ECCFF;
+    border-radius: 20rpx;
+    padding: 0 12rpx;
+  }
+}
+
+.doc_label {
+  display: flex;
+  margin-top: 20rpx;
+  overflow: hidden;
+  .label {
+    white-space: nowrap;
+    display: block;
+    font-size: 20rpx;
+    color: #999999;
+    padding: 5rpx 13rpx;
+    background-color: #EBF2FA;
+    border-radius: 22rpx;
+    margin-right: 10rpx;
+    box-sizing: border-box;
+    &:last-child {
+      margin-right: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "矫正问答",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "tabhome": "../../components/tab_home/tab_home",
+    "confirm": "../../components/confirm/confirm"
+  }
+}

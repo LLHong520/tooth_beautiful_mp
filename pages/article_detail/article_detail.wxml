@@ -1,0 +1,119 @@
+<wxs src="../../scripts/common.wxs" module="common" />
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+  <view class="question_detail">
+    <view class="detail">
+      <view class="question">{{articleDetail.title}}</view>
+      <view wx:if="{{artType==1}}" class="user_info">
+        {{articleDetail.authorName}} · {{common.dataFormat(articleDetail.pushTime)}} 发布
+      </view>
+      <view wx:if="{{artType==2}}" class="user_info">
+        <image class="photo" src="{{common.GET_IMG_URL(articleDetail.portraitUrl)}}"></image>
+        <view class="user_msg">
+          <text class="user_form">来自：<text class="user_name">{{articleDetail.authorName}}</text></text>
+          <text class="user_date">{{common.dataFormat(articleDetail.pushTime)}} 发布</text>
+        </view>
+      </view>
+      <view class="article_content">
+        <!-- 文章详情富文本内容 -->
+        <template is="wxParse" data="{{wxParseData:article_content.nodes}}"/>
+        <!-- /文章详情富文本内容 -->
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{diseaseInfo.id}}" class="disease-box">
+    <view class="disease-wrapper">
+      <view class="title">· 病例回顾 ·</view>
+      <view class="dis-analy">
+        <view class="dis-analy-list type_disease">
+          <view class="dis-analy-content triangle_r">
+            <view>
+              <text class="bold">病情描述:</text>
+              <template is="wxParse" data="{{wxParseData:diseaseInfo.qcontent.nodes}}"/>
+              <!--{{diseaseInfo.qcontent}}-->
+            </view>
+            <view>
+              <text class="bold">希望获得的帮助：</text>
+              <template is="wxParse" data="{{wxParseData:diseaseInfo.qneed.nodes}}"/>
+              <!--{{diseaseInfo.qneed}}-->
+            </view>
+            <!--病情描述图集
+            <view class="clearfix">
+              <block wx:for="{{diseaseInfo.picIds}}" wx:for-index="index" wx:for-item="userItem" wx:key="index">
+                <image src="{{common.GET_IMG_URL(userItem)}}" />
+              </block>
+            </view>
+            -->
+          </view>
+          <view class="faceImg ml20">
+            <image src="{{common.GET_IMG_URL(diseaseInfo.uPic)}}" /><!-- 患者头像 -->
+          </view>
+        </view>
+        <view class="dis-analy-list">
+          <view class="faceImg">
+            <image src="{{common.GET_IMG_URL(diseaseInfo.drPic)}}" /><!-- 医生头像 -->
+          </view>
+          <view class="dis-analy-content triangle_l">
+            <view>
+              <text class="bold">医生解答：</text>
+              <template is="wxParse" data="{{wxParseData:diseaseInfo.acontent.nodes}}"/>
+              <!--{{diseaseInfo.acontent}}-->
+            </view>
+            <!--医生解答图集
+            <view class="clearfix">
+              <block wx:for="{{diseaseInfo.drPicIds}}" wx:for-index="index" wx:for-item="docItem" wx:key="index">
+                <image src="{{common.GET_IMG_URL(docItem)}}" />
+              </block>
+            </view>
+            -->
+          </view>
+        </view>
+        <!--追问追答循环 -->
+        <block wx:for="{{diseaseInfo.dialogs}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view wx:if="{{item.isQuest}}" class="dis-analy-list type_disease">
+            <view class="dis-analy-content triangle_r">
+              <view>
+                <template is="wxParse" data="{{wxParseData:replyTemArray[index]}}"/>
+                <!-- {{item.content}} -->
+              </view>
+              <!-- 追问图集
+              <block wx:for="{{item.picIds}}" wx:for-index="index" wx:for-item="item" wx:key="index" class="clearfix">
+                <image src="{{common.GET_IMG_URL(item)}}" />
+              </block>
+               -->
+            </view>
+            <view class="faceImg ml20">
+              <image src="{{common.GET_IMG_URL(item.uPic)}}" /><!-- 患者头像 -->
+            </view>
+          </view>
+          <view wx:if="{{!item.isQuest}}" class="dis-analy-list">
+            <view class="faceImg">
+              <image src="{{common.GET_IMG_URL(diseaseInfo.drPic)}}" /><!-- 医生头像 -->
+            </view>
+            <view class="dis-analy-content triangle_l">
+              <view>
+                <template is="wxParse" data="{{wxParseData:replyTemArray[index]}}"/>
+                <!--{{item.content}}-->
+              </view>
+              <!--追问图集
+              <view class="clearfix">
+                <block wx:for="{{item.picIds}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+                  <image src="{{common.GET_IMG_URL(item)}}" />
+                </block>
+              </view>
+              -->
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="no-text">已经到最后了喔</view>
+    </view>
+  </view>
+    <!-- 返回首页 -->
+  <view class="toIndexPage" wx:if="{{isShowIndexIcon}}" bindtap="toIndexPage">
+    <view class="toIndexPage_img">
+      <image src="../../assets/icons/icon_index.png" mode="scaleToFill"/>
+    </view>
+  </view>
+  <!-- /返回首页 -->
+</view>

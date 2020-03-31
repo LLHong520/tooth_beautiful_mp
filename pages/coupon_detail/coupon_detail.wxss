@@ -1,0 +1,142 @@
+page {
+  height: 100%;
+}
+.container {
+  min-height: 100%;
+  padding: 32rpx 32rpx 160rpx;
+  background: linear-gradient(223deg, #a1a8e8 0%, #73abe9 100%);
+  box-sizing: border-box;
+}
+.coupon_detail_page {
+  background-color: #fff;
+  padding: 32rpx;
+  border-radius: 8rpx;
+}
+.coupon_detail {
+  position: relative;
+  padding-bottom: 42rpx;
+  border-bottom: 1rpx dashed #CCCCCC;
+}
+.coupon_detail .content text {
+  display: block;
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 33rpx;
+}
+.coupon_detail .content .coupon_name {
+  font-size: 36rpx;
+  color: #2D2D2D;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.coupon_detail .content .coupon_activity {
+  margin: 15rpx 0 10rpx;
+}
+.coupon_detail .content .coupon_activity,
+.coupon_detail .content .coupon_date {
+  max-width: 530rpx;
+}
+.coupon_detail .icon {
+  width: 106rpx;
+  height: 106rpx;
+  position: absolute;
+  right: -2rpx;
+  bottom: 29rpx;
+}
+.coupon_detail .icon image {
+  width: 100%;
+  height: 100%;
+}
+.coupon_code {
+  padding: 44rpx 0 43rpx;
+  background-color: #fff;
+  border-bottom: 1rpx dashed #CCCCCC;
+  position: relative;
+}
+.coupon_code .code_num {
+  width: 100%;
+  padding: 19rpx 0;
+  display: flex;
+  border: 1rpx solid #CCCCCC;
+  border-radius: 8rpx;
+  justify-content: center;
+  margin-top: 32rpx;
+}
+.coupon_code .code_num view {
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 40rpx;
+}
+.coupon_code .code_num view:last-child {
+  color: #2D2D2D;
+}
+.coupon_code .code_num .delete {
+  position: relative;
+  color: #999999 !important;
+}
+.coupon_code .code_num .delete:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1rpx;
+  background-color: #999999;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.coupon_code .two_circle {
+  position: absolute;
+  width: 100%;
+}
+.coupon_code .two_circle .circle {
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #8EA9E8;
+}
+.coupon_code .two_circle .left_circle {
+  left: -42rpx;
+}
+.coupon_code .two_circle .right_circle {
+  right: -42rpx;
+}
+.coupon_code .top_two_circle {
+  top: -10rpx;
+}
+.coupon_code .bottom_two_circle {
+  bottom: 10rpx;
+}
+.text_title {
+  font-size: 28rpx;
+  color: #2D2D2D;
+  line-height: 40rpx;
+  font-weight: bold;
+}
+.coupon_place {
+  padding: 42rpx 0 49rpx;
+  background-color: #fff;
+}
+.coupon_place .palce_address {
+  margin-top: 30rpx;
+  display: flex;
+}
+.coupon_place .palce_address text {
+  display: block;
+  font-size: 22rpx;
+  line-height: 30rpx;
+}
+.coupon_place .palce_address .name {
+  color: #666666;
+}
+.coupon_place .palce_address .address {
+  color: #999999;
+}
+.coupon_place .palce_address .point {
+  display: block;
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 50%;
+  background-color: #999999;
+  margin: 14rpx 5rpx 0 0;
+}

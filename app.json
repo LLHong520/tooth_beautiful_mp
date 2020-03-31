@@ -1,0 +1,67 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/tooth_acts/tooth_acts",
+    "pages/out_link/out_link",
+    "pages/tooth_knowledge/tooth_knowledge",
+    "pages/correction_case/correction_case",
+    "pages/correction_ask/correction_ask",
+    "pages/article_detail/article_detail",
+    "pages/question_detail/question_detail",
+    "pages/comment/comment",
+    "pages/welfare/welfare",
+    "pages/find/find",
+    "pages/find_lan/find_lan",
+    "pages/docs/docs",
+    "pages/login/login",
+    "pages/post/post",
+    "pages/mine/mine",
+    "pages/my_question/my_question",
+    "pages/404/404",
+    "pages/coupon/coupon",
+    "pages/coupon_detail/coupon_detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "如齿美丽",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#CCCCCC",
+    "selectedColor":"#2D2D2D",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "assets/tab_icon/tabbar_home@2x.png",
+      "selectedIconPath": "assets/tab_icon/tabbar_home_on@2x.png"
+    }
+    ,
+    {
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "assets/tab_icon/tabbar_find@2x.png",
+      "selectedIconPath": "assets/tab_icon/tabbar_find_on@2x.png"
+    }
+    ,
+    {
+      "pagePath": "pages/docs/docs",
+      "text": "医生",
+      "iconPath": "assets/tab_icon/tabbar_doctor@2x.png",
+      "selectedIconPath": "assets/tab_icon/tabbar_doctor_on@3x.png"
+    }
+    ,
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "assets/tab_icon/tabbar_me@2x.png",
+      "selectedIconPath": "assets/tab_icon/tabbar_me_on@2x.png"
+    }
+   ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}
