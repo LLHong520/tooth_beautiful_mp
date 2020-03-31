@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.dev.wenwo.com/muxinxian/tooth_beautiful_mp.git"
+    "url": "https://git.dev.wenwo.com/lilihong/tooth_beautiful_mp.git"
   },
-  "author": "xinxian.mu@pingcl.com",
+  "author": "lihong.li@pingcl.com",
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^8.0.3",
